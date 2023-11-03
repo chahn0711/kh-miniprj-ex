@@ -11,6 +11,10 @@ const AxiosApi = {
     // post는 내부로 데이터를 숨겨서 json으로 날려줌)
     return await axios.post(KH_DOMAIN + "/users/login", login);
   },
+  // 회원 정보 조회
+  memberList: async (id) => {
+    return await axios.get(KH_DOMAIN + `/users/member/?id=${id}`);
+  },
 };
 
 export default AxiosApi;
